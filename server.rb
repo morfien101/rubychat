@@ -73,7 +73,7 @@ class Server
 				msg_body = msg[2..-1].join(" ")
 				# Send the message only to the recipient. 
 				# Add in "Whispered" to show it is a whisper.
-				@connections[:clients][whisper_to.to_sym].puts "#{username.to_s} Wispered: #{msg_body}"	
+				@connections[:clients][whisper_to.to_sym].puts "#{username.to_s} Whispered: #{msg_body}"	
 			else
 				# Send all other messages to all users.
 				@connections[:clients].each do |other_name, other_client|
